@@ -1,21 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a Next.js project bootstrapped with create-next-app.
 
-## Getting Started
+Getting Started
+Install dependencies:
 
-First, run the development server:
-
-```bash
+``` 
 npm install
-then
+
+Build the project:
 npm run build
-then
+
+Start the server:
 npm run start
 ```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-enter any number and go to doc page 
+How to Test Offline Behavior
+On the Home page, enter any number and navigate to the Doc page.
 
-open devtools>application>service workers check offline box  to simulate offline mode, back to home and enter any new number , will take you offline doc page and if you change in url any number will load in offline doc page 
+Open DevTools → Application → Service Workers and check the Offline box to simulate offline mode.
 
-if you route to unknow url as /unknown 
-it will display an public offline page not offlien doc page 
+Go back to Home, enter a new number, and you’ll be redirected to the offline Doc page.
+
+Change the number in the URL — it will still load the offline Doc page.
+
+Special Case: Unknown Routes
+If you navigate to an unknown route (e.g., /unknown),
+it will display a public offline page — not the offline Doc page.
